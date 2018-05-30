@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+    <title>
+      <% @title || "Student Information System"%>
+    </title>
+    <link href="/styles.css" rel="stylesheet", type='text/css'>
+  </head>
+  <body>
+    <h1> Student Information System  </h1>
+    <%=erb :tabs_menu%>
+    <%= yield %>
+  </body>
+</html>

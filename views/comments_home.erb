@@ -1,0 +1,15 @@
+<h3>Comments...</h3>
+
+<a href='/comments/new'>Add a New Comment</a>
+
+<% if @comments.any? %>
+<ul style="list-style-type:circle">
+	<% @comments.each do |c| %>
+	<li>
+		<a href="/comments/<%=c.id%>"><%=c.id%>: Comment- <%= c.comment_txt %> Created at- <%= c.created_at %> </a>
+	</li>
+	<%end%>
+</ul>
+<%else %>
+	<p>No Comments Present!!!</p>
+<% end %>

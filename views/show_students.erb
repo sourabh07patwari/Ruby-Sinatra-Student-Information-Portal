@@ -1,0 +1,15 @@
+<p>Record of Student <%=@student.firstname%> <%=@student.lastname%></p>
+<p>SCU ID: <%=@student.scuid%></p>
+<p>First Name: <%=@student.firstname%></p>
+<p>Last Name: <%=@student.lastname%></p>
+<p>Birthdate: <%=@student.birthday%></p>
+<p>Address: <%=@student.address%></p>
+
+<a href="/students">Back to All Records</a>
+
+<a href="/students/<%=@student.id%>/edit">Edit this Student Record</a>
+
+<form action="/students/<%=@student.id%>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="Delete This Record of Student">
+</form>
